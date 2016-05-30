@@ -1,0 +1,14 @@
+//
+//  MSFoundation-Prefix.pch
+//  MSFoundation
+//
+//  Created by ganshunwei on 16/5/30.
+//  Copyright © 2016年 ganshunwei. All rights reserved.
+//
+
+#ifndef MSFoundation_Prefix_pch
+#define MSFoundation_Prefix_pch
+
+#import "MSCONSTANT.h"
+
+#endif /* MSFoundation_Prefix_pch */
