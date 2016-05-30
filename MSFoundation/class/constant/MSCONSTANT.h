@@ -62,6 +62,8 @@
 /** 弱引用自己 */
 #define SBWS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 
+#define checkNotNull(key) (key != nil && [key length] > 0)
+
 // 应用程序版本检查
 #define APPCONFIG_APP_MSG_RELOAD_INTERVAL   300                         // 提示信息多长事件重新刷新一次（当前定为5分钟，调试时可修改）。
 #define APPCONFIG_APP_LOGIN_INTERVAL        900                         // 挂起多长时间后，激活时重新登录，单位秒（约定为15分钟，调试时可修改）。
@@ -92,8 +94,8 @@
 
 
 // UI 界面大小
-#define APPCONFIG_UI_SCREEN_FHEIGHT             ([UIScreen mainScreen].bounds.size.height)              //界面的高度 iphone5 568 其他480
-#define APPCONFIG_UI_SCREEN_FWIDTH              ([UIScreen mainScreen].bounds.size.width)               //界面的宽度 iphone 320
+#define SCREEN_HEIGHT             ([UIScreen mainScreen].bounds.size.height)              //界面的高度 iphone5 568 其他480
+#define SCREEN_WIDTH              ([UIScreen mainScreen].bounds.size.width)               //界面的宽度 iphone 320
 #define APPCONFIG_UI_CONTROLLER_FHEIGHT         (self.view.frame.size.height)                           //界面的高度 iphone5 548 其他460
 #define APPCONFIG_UI_CONTROLLER_FWIDTH          APPCONFIG_UI_SCREEN_FWIDTH                              //界面的宽度 iphone 320
 #define APPCONFIG_UI_VIEW_FHEIGHT               (self.frame.size.height)                                //界面的高度 iphone5 548 其他460
