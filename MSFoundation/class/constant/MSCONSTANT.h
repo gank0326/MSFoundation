@@ -60,7 +60,7 @@
 #define RGB_HEX(__h__) RGB((__h__ >> 16) & 0xFF, (__h__ >> 8) & 0xFF, __h__ & 0xFF)
 
 /** 弱引用自己 */
-#define SBWS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 
 #define checkNotNull(key) (key != nil && [key length] > 0)
 
